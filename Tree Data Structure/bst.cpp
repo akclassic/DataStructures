@@ -1,5 +1,6 @@
 #include<iostream>
 #include<queue>
+#include<climits>
 
 using namespace std;
 
@@ -129,15 +130,40 @@ Node* deletion(Node* root, int target){
     }
 }
 
+bool checkBST(Node *root, int min = INT_MIN , int max = INT_MAX){
+    if(root == NULL){
+        return true;
+    }
+
+    if(root->data >= min && root->data<=max && checkBST(root->left,min,root->data) && checkBST(root->right,root->data,max)){
+        return true;
+    }else{
+        return false;
+    }
+    
+}
+
 
 int main(){
     Node* root = build();
+    // bfs(root);
+    // cout<<endl;
+    // int s;
+    // cin>>s;
+    // root = deletion(root,s);
+    // if(checkBST(root)) cout<<"Yes\n";
+    // else{
+    //     cout<<"No";
+    // }
+    if( bins(root,363)){
+        cout<<"found";
+    }else
+    {
+        cout<<"not found";
+    }
+    
+    cout<<endl;
     bfs(root);
     cout<<endl;
-    int s;
-    cin>>s;
-    root = deletion(root,s);
-    cout<<endl;
-    bfs(root);
 }
 
