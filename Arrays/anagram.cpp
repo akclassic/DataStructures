@@ -8,7 +8,7 @@ int main(void){
     string a = "abbac";
     string b = "bbaac";
     bool flag=true;
-    int freq[256];
+    int freq[256]={0};
     for(int i=0;i<a.length();i++){
         freq[a[i]-'a']++;
     }
