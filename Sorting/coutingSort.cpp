@@ -32,7 +32,7 @@ void countSort(int *arr, int n)
 
     int output[n] = {0};
 
-    for (int i = 0; i < n; ++i)
+    for (int i = n-1; i >=0; i--)
     {
         output[count[arr[i]] - 1] = arr[i];
         --count[arr[i]];
@@ -49,7 +49,7 @@ void countSort(int *arr, int n)
 
 int main(void)
 {
-    int arr[] = {5, 5, 2, 3, 9, 9, 9, 7, 6, 4, 1, 1};
+    int arr[] = {7,5,6,7,1,1,2,8};
     int n = sizeof(arr) / sizeof(int);
     countSort(arr, n);
     return 0;
