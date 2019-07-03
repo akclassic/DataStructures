@@ -38,3 +38,17 @@ int main(void)
     }
     return 0;
 }
+
+/*
+Js example
+var str = 'The.quick.brown.fox.jumps.over.the.lazy.dog';
+
+var words = str.split('.');
+let wordsReversed = [];
+for(let i = words.length -1; i>=0;i--){
+  	wordsReversed.push(words[i]);
+	//console.log(words[i]);
+}
+console.log(wordsReversed);
+
+*/
