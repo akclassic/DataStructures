@@ -6,7 +6,7 @@ using namespace std;
 int main(void){
 
     string a = "abbac";
-    string b = "bbaac";
+    string b = "baaac";
     bool flag=true;
     int freq[256]={0};
     for(int i=0;i<a.length();i++){

@@ -11,6 +11,7 @@ int main(void){
         if(cs<0){
             cs=0;
         }
+        //cout<<"cs: "<<cs<<" ms: "<<ms<<endl;
         ms = max(cs,ms);
     }
     cout<<"max sum= "<<ms;
